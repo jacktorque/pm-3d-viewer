@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "b420f8e5-a7ea-4c0d-9f80-a2f54fe0afc2",
+		"name": "TROSR 플랫폼 PM API(배포용)",
+		"description": "# Introduction\n이 문서는 TROSAR 개발 플랫폼에서 제공하는 API 연동에 관한 내용을 정의한 문서입니다.\n\n# Overview\n본 문서에서는 TROSAR 개발 플랫폼에서 제공하는 API 구성 정보와 사용법에 대해 설명합니다.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7963127",
+		"_collection_link": "https://planetary-space-92358.postman.co/workspace/New-Team-Workspace~2bde14db-bb4f-404e-a4e6-c7be9e374df7/collection/7963127-b420f8e5-a7ea-4c0d-9f80-a2f54fe0afc2?action=share&source=collection_link&creator=7963127"
+	},
+	"item": [
+		{
+			"name": "PM 리스트",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/?search=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": ""
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 상세정보",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:62278/pm/7986e787-dc4f-42b9-9f51-76808eac1b29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"7986e787-dc4f-42b9-9f51-76808eac1b29"
+					],
+					"query": [
+						{
+							"key": "type1",
+							"value": "입력",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "제동",
+							"disabled": true
+						},
+						{
+							"key": "spec",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 생성",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"테스트 PM\",\n    \"description\": \"테스트 PM 입니다.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 수정",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n        {\n            \"name\": \"테스트2\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/fb869d6d-ad6c-44b3-af3a-1140faa12a27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"fb869d6d-ad6c-44b3-af3a-1140faa12a27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 삭제",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/fb869d6d-ad6c-44b3-af3a-1140faa12a27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"fb869d6d-ad6c-44b3-af3a-1140faa12a27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 특성정보 리스트",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/7986e787-dc4f-42b9-9f51-76808eac1b29/content",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"7986e787-dc4f-42b9-9f51-76808eac1b29",
+						"content"
+					],
+					"query": [
+						{
+							"key": "type1",
+							"value": "입력",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 특성정보 생성",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": [\n        {\n            \"type1\": \"PM입력\",\n            \"type2\": \"\",\n            \"name\": \"TCMS 제동명령\",\n            \"description\": \"입력\",\n            \"spec\": \"DC 12V\",\n            \"notes\": \"\"\n        },\n        {\n            \"type1\": \"PM기능\",\n            \"type2\": \"\",\n            \"name\": \"제동제어기능\",\n            \"description\": \"기능\",\n            \"spec\": \"\",\n            \"notes\": \"\"\n        },\n        {\n            \"type1\": \"PM출력\",\n            \"type2\": \"\",\n            \"name\": \"제동명령 신호\",\n            \"description\": \"출력\",\n            \"spec\": \"DC 24V\",\n            \"notes\": \"\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/c6d2b78d-e55d-40a5-b23e-e64655a15ef4/content",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"c6d2b78d-e55d-40a5-b23e-e64655a15ef4",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 특성정보 수정",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type1\": \"PM출력\",\n    \"type2\": \"\",\n    \"name\": \"제동명령 신호_수정\",\n    \"description\": \"출력\",\n    \"spec\": \"DC 24V\",\n    \"notes\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/4aab8982-66be-4c01-b3f6-2c6dc07a92b3/content/e4d3b3e8-5158-40c7-8dfa-f135cfdd7ff3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"4aab8982-66be-4c01-b3f6-2c6dc07a92b3",
+						"content",
+						"e4d3b3e8-5158-40c7-8dfa-f135cfdd7ff3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 특성정보 삭제",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/4aab8982-66be-4c01-b3f6-2c6dc07a92b3/content/22d159da-790e-4fb6-a7c2-ff5cce1d7665",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"4aab8982-66be-4c01-b3f6-2c6dc07a92b3",
+						"content",
+						"22d159da-790e-4fb6-a7c2-ff5cce1d7665"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 특성 파일 업로드",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "UTF-8",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"contentType": "",
+							"type": "file",
+							"src": "/C:/Users/cho13/Downloads/240503101005_8mm Spanner.obj"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/4c65cf7f-a3d8-40a0-a5c0-a6a345ba8304/content/file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"4c65cf7f-a3d8-40a0-a5c0-a6a345ba8304",
+						"content",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 특성 파일 다운로드",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "UTF-8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"contentType": "",
+							"type": "file",
+							"src": "/Users/jscho/Downloads/noname.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:62278/data/file/77a28ff8-d0bc-4e11-9f8a-d7da502eedcb/240418053146_BOX VALVE PANEL - VALVE ASS''Y.step",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"data",
+						"file",
+						"77a28ff8-d0bc-4e11-9f8a-d7da502eedcb",
+						"240418053146_BOX VALVE PANEL - VALVE ASS''Y.step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM_I 생성(new)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pm_sId\" :\"4c65cf7f-a3d8-40a0-a5c0-a6a345ba8304\",\n    \"name\" : \"인스턴스\",\n    \"description\" : \"인스턴스 pm 입니다.\"\n\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/i",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"i"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 트리뷰(new)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/tree/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"tree",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PM 특성정보 업데이트/생성(new)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": [\n        {\n            \"id\": \"85383487-703d-42d5-bbff-79d8e3e7fd30\",\n            \"type1\": \"PM출력\",\n            \"type2\": \"\",\n            \"name\": \"TCMS 제동명령 수정\",\n            \"description\": \"기능\",\n            \"spec\": \"DC 12V\",\n            \"notes\": \"\"\n        },\n        {\n            \"type1\": \"PM기능\",\n            \"type2\": \"\",\n            \"name\": \"제동제어기능 생성\",\n            \"description\": \"기능\",\n            \"spec\": \"\",\n            \"notes\": \"\"\n        },\n        {\n            \"type1\": \"PM출력\",\n            \"type2\": \"\",\n            \"name\": \"제동명령 신호 생성\",\n            \"description\": \"출력\",\n            \"spec\": \"DC 24V\",\n            \"notes\": \"\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62278/pm/4c65cf7f-a3d8-40a0-a5c0-a6a345ba8304/content/upsert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62278",
+					"path": [
+						"pm",
+						"4c65cf7f-a3d8-40a0-a5c0-a6a345ba8304",
+						"content",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
